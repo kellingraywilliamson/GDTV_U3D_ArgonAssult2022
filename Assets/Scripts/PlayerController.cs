@@ -3,16 +3,27 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float controlSpeed = 20;
-    [SerializeField] private float xRange = 3.5f;
-    [SerializeField] private float yRange = 2f;
+    [Header("General Settings")] [Tooltip("How fast the ship moves up and down.")] [SerializeField]
+    private float controlSpeed = 20;
+
+    [Tooltip("The horizontal range of the screen the player can move across.")] [SerializeField]
+    private float xRange = 3.5f;
+
+    [Tooltip("The vertical range of the screen the player can move across.")] [SerializeField]
+    private float yRange = 2f;
+
     [SerializeField] private float positionPitchFactor = -15f;
     [SerializeField] private float controlPitchFactor = -10f;
     [SerializeField] private float positionYawFactor = 2f;
     [SerializeField] private float controlRollFactor = -20f;
 
+    [Header("Projectile Settings")]
+    [Tooltip("References to the laser GameObjects that will be activated/deactivated when the player fires.")]
+    [SerializeField] private GameObject[] lasers;
+
     private Vector2 _movementInputValue;
     private Vector3 _currentLocalPosition;
+    private bool _isFiring = false;
 
     // Update is called once per frame
     private void Update()
@@ -34,15 +45,18 @@ public class PlayerController : MonoBehaviour
 
     public void Fire(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            print("firing!");
-        }
+        _isFiring = context.performed;
     }
+
     private void ProcessFiring()
     {
-        // Debug.Log(fire.ReadValue<float>());
+        foreach (var laser in lasers)
+        {
+            var em = laser.GetComponent<ParticleSystem>().emission;
+            em.enabled = _isFiring;
+        }
     }
+
 
     private void ProcessRotation()
     {
@@ -57,11 +71,11 @@ public class PlayerController : MonoBehaviour
 
     private void ProcessTranslation()
     {
-        var xOffset = _movementInputValue.x * controlSpeed;
-        var yOffset = _movementInputValue.y * controlSpeed;
+        var xOffset = _movementInputValue.x * controlSpeed * Time.deltaTime;
+        var yOffset = _movementInputValue.y * controlSpeed * Time.deltaTime;
 
-        var rawXPos = _currentLocalPosition.x + (xOffset * Time.deltaTime);
-        var rawYPos = _currentLocalPosition.y + (yOffset * Time.deltaTime);
+        var rawXPos = _currentLocalPosition.x + xOffset;
+        var rawYPos = _currentLocalPosition.y + yOffset;
         var clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
         var clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 

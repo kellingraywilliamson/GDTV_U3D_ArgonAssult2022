@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 615744928}
   - component: {fileID: 615744927}
   - component: {fileID: 615744926}
+  - component: {fileID: 615744930}
   - component: {fileID: 615744925}
   m_Layer: 0
   m_Name: Enemy
@@ -493,6 +494,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 1.312332, y: 353.0476, z: 1.796036}
+--- !u!114 &615744930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615744924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d12828bfad94444881a5fb3bad7669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,131 +555,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1854262248 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 172729169678074247, guid: b08f54a431aa64d25a92b701ffda68ef,
-    type: 3}
-  m_PrefabInstance: {fileID: 3217086943153424189}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2111765274 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef,
-    type: 3}
-  m_PrefabInstance: {fileID: 3217086943153424189}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854262248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a1b85b9e23db4ab98cb9251f6072221, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2111765275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854262248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 4ed38fc0778564bba94fbe9752da2240,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2111765274}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: c8ce8966-2c33-42e6-9943-5c7b5f35dc78
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c015d2d1-9302-4596-bb78-168546e998c1
-    m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2111765274}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Fire
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 4561bcd1-f8b2-48c4-80e7-b1a1793cfaf7
-    m_ActionName: Player/Fire[/Mouse/leftButton,/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f4c7040c-d226-456f-a6ee-26ee413ce47b
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ae860734-8b53-47df-98bf-fc17e16101f7
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9cfb61d2-3291-42fa-9b1c-e5952f7057fd
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 132a3fa9-074d-424b-9deb-496bca124dbb
-    m_ActionName: UI/Point[/Mouse/position,/Pen/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0047d96d-0fdf-47d0-baed-2823a4843404
-    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 693cf571-0913-4502-a201-08c77ef2b6e4
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e9fdbec2-3696-423f-8b5d-fb96ef002b3e
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8f2ff7bf-4ea8-4050-b218-bcb504118a02
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4e323a2a-d127-4a98-961f-862aa60f407b
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 49e619a4-b25d-4d24-8ece-1bff7ef90397
-    m_ActionName: UI/TrackedDeviceOrientation
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1001 &3217086943153424189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -674,58 +562,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: fire.m_Id
-      value: b73ac8f0-9f70-4836-8094-87175d0f654a
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: fire.m_Name
-      value: Fire
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: fire.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: fire.m_ExpectedControlType
-      value: Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: fire.m_SingletonActionBindings.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: movement.m_SingletonActionBindings.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Id
-      value: ffc1bfbb-5ac0-4fb7-a6d8-7ae19cd58374
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/space
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Fire
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: movement.m_SingletonActionBindings.Array.data[5].m_Id
-      value: 0a3cdaaa-04ef-4bdf-a86a-0ec984878a8e
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: movement.m_SingletonActionBindings.Array.data[0].m_Name
-      value: Movement
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: movement.m_SingletonActionBindings.Array.data[5].m_Path
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7, guid: b08f54a431aa64d25a92b701ffda68ef, type: 3}
-      propertyPath: movement.m_SingletonActionBindings.Array.data[5].m_Action
-      value: Movement
-      objectReference: {fileID: 0}
     - target: {fileID: 3217086942610305728, guid: b08f54a431aa64d25a92b701ffda68ef,
         type: 3}
       propertyPath: m_RootOrder
