@@ -113,7 +113,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 5910876922342238501, guid: 3d8fc681ed51746bea40793e946222bc,
     type: 3}
+  hitVFX: {fileID: 8403865104346200429, guid: 20f21a73f90024811988a9b012ff90c2, type: 3}
   parent: {fileID: 0}
+  scoreValue: 5
+  hitPoints: 3
 --- !u!95 &4471320880812654527
 Animator:
   serializedVersion: 4
